@@ -1,0 +1,59 @@
+{
+  "company": "Acme Pvt Ltd",
+  "invoice_no": "INV-001",
+  "customer": {
+    "name": "Mubashir"
+  },
+  "items": [
+    {
+      "name": "Widget",
+      "qty": 2,
+      "price": "100.00"
+    },
+    {
+      "name": "Gadget",
+      "qty": 1,
+      "price": "250.00"
+    },
+    {
+      "name": "Cable",
+      "qty": 5,
+      "price": "20.00"
+    }
+  ],
+  "total": "550.00",
+  "matrix": {
+    "columns": [
+      {
+        "key": "region",
+        "label": "Region"
+      },
+      {
+        "key": "q1",
+        "label": "Q1"
+      },
+      {
+        "key": "q2",
+        "label": "Q2"
+      },
+      {
+        "key": "q3",
+        "label": "Q3"
+      }
+    ],
+    "rows": [
+      {
+        "region": "West",
+        "q1": 10,
+        "q2": 12,
+        "q3": 9
+      },
+      {
+        "region": "East",
+        "q1": 7,
+        "q2": null,
+        "q3": 14
+      }
+    ]
+  }
+}

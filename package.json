@@ -1,0 +1,15 @@
+{
+  "name": "pdf-templates",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "gotenberg": "docker compose up -d",
+    "dev:api": "npm run dev -w apps/render-api",
+    "dev:editor": "npm run dev -w apps/editor",
+    "test": "npm run test -w apps/render-api",
+    "typecheck": "npm run typecheck -w apps/render-api && npm run typecheck -w apps/editor",
+    "smoke": "npm run smoke -w apps/render-api"
+  }
+}

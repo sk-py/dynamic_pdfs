@@ -1,0 +1,242 @@
+{
+  "body": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Invoice "
+          },
+          {
+            "type": "variableChip",
+            "attrs": {
+              "key": "invoice_no"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Bill to: "
+          },
+          {
+            "type": "variableChip",
+            "attrs": {
+              "key": "customer.name"
+            },
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "content": [
+          {
+            "type": "tableRow",
+            "content": [
+              {
+                "type": "tableHeader",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Item"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Qty"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableHeader",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "Price"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tableRow",
+            "attrs": {
+              "repeatKey": "items"
+            },
+            "content": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "variableChip",
+                        "attrs": {
+                          "key": "name"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "variableChip",
+                        "attrs": {
+                          "key": "qty"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "paragraph",
+                    "content": [
+                      {
+                        "type": "variableChip",
+                        "attrs": {
+                          "key": "price"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Total: ",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ]
+          },
+          {
+            "type": "variableChip",
+            "attrs": {
+              "key": "total"
+            },
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Usage matrix"
+          }
+        ]
+      },
+      {
+        "type": "dynamicMatrixTable",
+        "attrs": {
+          "dataKey": "matrix",
+          "headerBg": "#f1f5f9",
+          "fontSize": "9px"
+        }
+      }
+    ]
+  },
+  "header": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "variableChip",
+            "attrs": {
+              "key": "company"
+            }
+          },
+          {
+            "type": "text",
+            "text": " - Invoice "
+          },
+          {
+            "type": "variableChip",
+            "attrs": {
+              "key": "invoice_no"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "Page {page} of {total}"
+          }
+        ]
+      }
+    ]
+  },
+  "page": {
+    "size": "A4",
+    "orientation": "portrait"
+  }
+}

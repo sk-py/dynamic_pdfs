@@ -1,0 +1,14 @@
+services:
+  gotenberg:
+    image: gotenberg/gotenberg:8
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"  
+    command:
+      - "gotenberg"
+      - "--chromium-disable-javascript=true"
+      - "--chromium-deny-private-ips=true"
+      # - "--chromium-allow-list=^file:///tmp/.*"
+      # - '--chromium-allow-list=^https://cdn\.example\.com(:|/|$$)'  
+      - "--chromium-max-queue-size=50"
+      - "--api-timeout=30s"
